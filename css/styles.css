@@ -127,8 +127,7 @@ ul {
 /* герой */
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 94px 0px;
 }
 .section.hero {
   max-width: 1600px;
@@ -243,9 +242,7 @@ ul {
 .section.activities {
   padding-top: 0px;
 }
-.activities-title,
-.team-title,
-.clients-title {
+.section__title {
   margin-bottom: 50px;
   color: var(--secondary-color);
   font-weight: 700;
@@ -312,7 +309,8 @@ ul {
   border-radius: 0px 0px 4px 4px;
   background-color: var(--footer-color);
 }
-.ellipse {
+
+.socials__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -327,17 +325,18 @@ ul {
   padding-right: 32px;
   justify-content: space-between;
 }
-.team-icon {
+.socials__icon {
   fill: var(--icon-color);
   transition: fill 250ms var(--timing-function);
 }
-.social-link:hover .ellipse,
-.social-link:focus .ellipse {
+
+.socials__link:hover,
+.socials__link:focus {
   background-color: #2196f3;
-}
-.social-link:hover .team-icon,
-.social-link:focus .team-icon {
   fill: var(--footer-color);
+}
+.socials__link:hover .socials__icon {
+  fill: #ffffff;
 }
 
 /* Постоянные клиенты */
@@ -346,7 +345,7 @@ ul {
   display: flex;
   justify-content: space-between;
 }
-.rectangle {
+.clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -366,8 +365,8 @@ ul {
 .clients-link:focus .clients-icon {
   fill: var(--accent-color);
 }
-.clients-link:hover .rectangle,
-.clients-link:focus .rectangle {
+.clients-link:hover .clients__link,
+.clients-link:focus .clients__link {
   border-color: var(--accent-color);
 }
 /* подвал */
@@ -406,11 +405,12 @@ ul {
 }
 .footer-socials-block {
   min-width: 206px;
+  margin-right: auto;
 }
 .footer .ellipse {
   background-color: rgba(255, 255, 255, 0.1);
 }
-.footer .team-icon {
+.footer .socials__icon {
   fill: var(--footer-color);
 }
 .footer-adress-block {
@@ -434,9 +434,6 @@ ul {
   line-height: 1.14;
 }
 /* форма в футере */
-.subscribe {
-  margin-left: auto;
-}
 .subscribe-form {
   display: flex;
   flex-direction: column;
@@ -661,6 +658,9 @@ ul {
   border-radius: 4px;
   transition: border-color 250ms var(--timing-function);
 }
+.modal-form-input:last-child {
+  margin-bottom: 20px;
+}
 .modal-form-icon {
   position: absolute;
   top: 50%;
@@ -677,7 +677,6 @@ ul {
   outline-width: 0px;
 }
 .textarea {
-  margin-bottom: 20px;
   resize: none;
   height: 120px;
   padding: 12px 16px;
